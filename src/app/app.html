@@ -19,3 +19,13 @@
                 </ng-template>
             </p-card>
         </div>
+
+
+        
+<div class="mb-4 p-8 flex items-center justify-center">
+    <p>Person Name: {{ person.name }}</p>
+    <p>Person Age: {{ person.age }}</p> 
+    <p>Person Address: {{ person.address.street }}, {{ person.address.city }}, {{ person.address.state }} {{ person.address.zip }}</p>
+    <p>Person Phone Number: {{ person.phoneNumber | json }}</p>
+
+</div>

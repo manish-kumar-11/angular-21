@@ -29,3 +29,5 @@
     <p>Person Phone Number: {{ person.phoneNumber | json }}</p>
 
 </div>
+
+<app-child [title]="data" (titleChange)="titleChange($event)"></app-child>

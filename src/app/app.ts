@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
+import { Child } from "./components/child/child";
 
 interface Person{
   name:string;
@@ -18,7 +19,7 @@ interface Person{
 }
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CardModule,ButtonModule,CommonModule],
+  imports: [RouterOutlet, CardModule, ButtonModule, CommonModule, Child],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -32,5 +33,10 @@ export class App {
     age:30, 
     address:{ street: '123 Main St', city: 'Anytown', state: 'CA', zip: '12345' },
     phoneNumber:[1234567890, 9876543210]
+  }
+
+  titleChange(newTitle:string){
+   // this.title.set(newTitle);
+    console.log('Title changed to:', newTitle);
   }
 }

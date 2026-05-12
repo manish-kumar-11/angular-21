@@ -4,6 +4,8 @@ import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 import { Child } from "./components/child/child";
+import { Nabvar } from "./components/nabvar/nabvar";
+import { Home } from "./components/home/home";
 
 interface Person{
   name:string;
@@ -19,7 +21,7 @@ interface Person{
 }
 @Component({
   selector: 'app-root',
-  imports: [RouterLink, RouterOutlet, CardModule, ButtonModule, CommonModule, Child],
+  imports: [RouterLink, RouterOutlet, CardModule, ButtonModule, CommonModule, Child, Nabvar, Home],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

@@ -1,5 +1,16 @@
-<h1 class="header-texts">Welcome to learning angular 21</h1>
 
+<router-outlet></router-outlet>
+
+<h1 class="header-texts">Welcome to learning angular 21</h1>
+<div style="display: flex; gap: 20px; margin-bottom: 20px;">
+    <div style="cursor: pointer;">
+        Home
+    </div>
+     <div style="cursor: pointer;" routerLink="/about">
+About    </div>
+     <div style="cursor: pointer;" routerLink="/contact">
+Contact    </div>
+</div>
 <div class="mb-4 p-8 flex items-center justify-center">
             <p-card [style]="{ width: '25rem', overflow: 'hidden' }">
                 <ng-template #header>

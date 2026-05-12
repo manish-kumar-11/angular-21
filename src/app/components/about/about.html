@@ -1,1 +1,58 @@
-<p>about works!</p>
+<div class="about-container">
+  <!-- Header Section -->
+  <section class="header-section">
+    <div class="header-content">
+      <h1 class="main-title">About Us</h1>
+      <p class="subtitle">Building exceptional digital experiences with Angular and modern web technologies</p>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div *ngFor="let stat of stats" class="stat-card">
+        <div class="stat-number">{{ stat.number }}</div>
+        <div class="stat-label">{{ stat.label }}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <h2 class="section-title">Our Core Values</h2>
+    <div class="features-grid">
+      <div *ngFor="let feature of features" class="feature-card">
+        <p-card class="feature-card-content">
+          <ng-template #header>
+            <div class="feature-icon">{{ feature.icon }}</div>
+          </ng-template>
+          <ng-template #title>
+            <h3 class="feature-title">{{ feature.title }}</h3>
+          </ng-template>
+          <p class="feature-description">{{ feature.description }}</p>
+        </p-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="content-section">
+    <div class="content-wrapper">
+      <div class="content-text">
+        <h2 class="section-title">Who We Are</h2>
+        <p class="content-paragraph">
+          We are a passionate team of web developers dedicated to crafting beautiful, functional, and user-friendly applications using the latest web technologies.
+        </p>
+        <p class="content-paragraph">
+          With expertise in Angular, TypeScript, and modern development practices, we transform ideas into reality and help businesses succeed in the digital world.
+        </p>
+        <p-button label="Learn More" icon="pi pi-arrow-right" styleClass="p-button-lg"></p-button>
+      </div>
+      <div class="content-image">
+        <div class="image-placeholder">
+          <i class="pi pi-code"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
